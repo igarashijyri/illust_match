@@ -22,6 +22,9 @@ gem 'uglifier', '>= 1.3.0'
 # ログイン認証
 gem 'devise'
 
+# 国際化対応
+gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -42,6 +45,9 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :development do
