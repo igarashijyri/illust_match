@@ -1,5 +1,6 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-require 'spec_helper'
+# HACK rails_helperと同じ階層なのに一つ前に戻る理由がわからない。気持ち悪いので調べる。qiitaにもあげる
+require '../spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
