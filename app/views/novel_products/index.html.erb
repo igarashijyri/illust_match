@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Novel Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @novel_products.each do |novel_product| %>
+      <tr>
+        <td><%= link_to 'Show', novel_product %></td>
+        <td><%= link_to 'Edit', edit_novel_product_path(novel_product) %></td>
+        <td><%= link_to 'Destroy', novel_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Novel Product', new_novel_product_path %>
