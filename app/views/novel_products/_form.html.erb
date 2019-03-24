@@ -2,7 +2,6 @@
   <% if novel_product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(novel_product.errors.count, "error") %> prohibited this novel_product from being saved:</h2>
-
       <ul>
       <% novel_product.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,7 +10,14 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <% form_for(@novel_product) do |f| %>
+    <div class="field">
+      <%= f.label :user_id %><br />
+      <%= f.text_field :user_id, size: 25 %>
+    </div>  
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
 <% end %>

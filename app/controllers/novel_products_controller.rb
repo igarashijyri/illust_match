@@ -69,6 +69,7 @@ class NovelProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def novel_product_params
-      params.fetch(:novel_product, {})
+      params.require(:novel_product).permit(:user_id)
+      # params.fetch(:novel_product, {})
     end
 end
