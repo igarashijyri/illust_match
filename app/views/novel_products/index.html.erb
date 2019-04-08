@@ -12,9 +12,9 @@
   <tbody>
     <% @novel_products.each do |novel_product| %>
       <tr>
-        <td><%= link_to 'Show', novel_product %></td>
-        <td><%= link_to 'Edit', edit_novel_product_path(novel_product) %></td>
-        <td><%= link_to 'Destroy', novel_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'マイページ', novel_product %></td>
+        <td><%= link_to 'マイページ編集', edit_novel_product_path(novel_product) %></td>
+        <td><%= link_to 'マイページ削除', novel_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Novel Product', new_novel_product_path %>
+<%= link_to 'マイページ作成', new_novel_product_path %>

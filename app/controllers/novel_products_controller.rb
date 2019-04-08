@@ -1,28 +1,21 @@
 class NovelProductsController < ApplicationController
   before_action :set_novel_product, only: [:show, :edit, :update, :destroy]
 
-  # GET /novel_products
-  # GET /novel_products.json
   def index
     @novel_products = NovelProduct.all
   end
 
-  # GET /novel_products/1
-  # GET /novel_products/1.json
   def show
+    @user = current_user[:id]
   end
 
-  # GET /novel_products/new
   def new
     @novel_product = NovelProduct.new
   end
 
-  # GET /novel_products/1/edit
   def edit
   end
 
-  # POST /novel_products
-  # POST /novel_products.json
   def create
     @novel_product = NovelProduct.new(novel_product_params)
 
@@ -37,8 +30,6 @@ class NovelProductsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /novel_products/1
-  # PATCH/PUT /novel_products/1.json
   def update
     respond_to do |format|
       if @novel_product.update(novel_product_params)
@@ -51,8 +42,6 @@ class NovelProductsController < ApplicationController
     end
   end
 
-  # DELETE /novel_products/1
-  # DELETE /novel_products/1.json
   def destroy
     @novel_product.destroy
     respond_to do |format|
@@ -62,12 +51,10 @@ class NovelProductsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_novel_product
       @novel_product = NovelProduct.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def novel_product_params
       params.require(:novel_product).permit(:user_id)
       # params.fetch(:novel_product, {})
