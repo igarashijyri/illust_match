@@ -3,7 +3,9 @@
 <ul class="users">
   <% @users.each do |user| %>
     <li>
-      <%= link_to user.email, user %>
+      <%= link_to user.name, user %>
     </li>
   <% end %>
 </ul>
+
+<%= image_tag("猫.jpg", width:300, height:250)  %>

@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
 
   # サインインした時の遷移先
   def after_sign_in_path_for(resource)
-    user_path(current_user[:id])
+  users_path
+  #  user_path(current_user[:id])
   end
 
   # サインアウトした時の遷移先
