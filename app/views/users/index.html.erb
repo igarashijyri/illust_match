@@ -2,7 +2,7 @@
 
 <% @users.each do |user| %>
   <div class ="user" >
-    <%= link_to user.name, user %><br>
+    <h4><%= link_to user.name, user %><br><h4>
     <%= image_tag("user_#{user.id}.jpg", width:300, height:250)  %><br>
   </div>
 <% end %>
@@ -10,3 +10,4 @@
 <div class="logout">
   <%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %>
 </div>
+
