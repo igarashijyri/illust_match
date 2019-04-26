@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # デバイス認証
   get 'users/index'
   get 'users/show'
+  get 'users/user_page'
   devise_for :users
   resources :users, :only => [:index, :show]
 
