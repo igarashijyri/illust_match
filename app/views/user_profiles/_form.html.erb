@@ -1,0 +1,137 @@
+<%= form_with(model: user_profile, local: true) do |form| %>
+  <% if user_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_profile.errors.count, "error") %> prohibited this user_profile from being saved:</h2>
+
+      <ul>
+      <% user_profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :user_profile_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :user_profile_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :null %>
+    <%= form.text_field :null, id: :user_profile_null %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender, id: :user_profile_gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.text_field :age, id: :user_profile_age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :language %>
+    <%= form.text_field :language, id: :user_profile_language %>
+  </div>
+
+  <div class="field">
+    <%= form.label :db %>
+    <%= form.text_field :db, id: :user_profile_db %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fw %>
+    <%= form.text_field :fw, id: :user_profile_fw %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tools %>
+    <%= form.text_field :tools, id: :user_profile_tools %>
+  </div>
+
+  <div class="field">
+    <%= form.label :server %>
+    <%= form.text_field :server, id: :user_profile_server %>
+  </div>
+
+  <div class="field">
+    <%= form.label :developer_experience %>
+    <%= form.text_field :developer_experience, id: :user_profile_developer_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :default %>
+    <%= form.text_field :default, id: :user_profile_default %>
+  </div>
+
+  <div class="field">
+    <%= form.label :operater_experience %>
+    <%= form.text_field :operater_experience, id: :user_profile_operater_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :default %>
+    <%= form.text_field :default, id: :user_profile_default %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tester_experience %>
+    <%= form.text_field :tester_experience, id: :user_profile_tester_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :false %>
+    <%= form.text_field :false, id: :user_profile_false %>
+  </div>
+
+  <div class="field">
+    <%= form.label :basic_design_experience %>
+    <%= form.text_field :basic_design_experience, id: :user_profile_basic_design_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :default %>
+    <%= form.text_field :default, id: :user_profile_default %>
+  </div>
+
+  <div class="field">
+    <%= form.label :details_design_experience %>
+    <%= form.text_field :details_design_experience, id: :user_profile_details_design_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :default %>
+    <%= form.text_field :default, id: :user_profile_default %>
+  </div>
+
+  <div class="field">
+    <%= form.label :test_design_experience %>
+    <%= form.text_field :test_design_experience, id: :user_profile_test_design_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :default %>
+    <%= form.text_field :default, id: :user_profile_default %>
+  </div>
+
+  <div class="field">
+    <%= form.label :appeal_text %>
+    <%= form.text_field :appeal_text, id: :user_profile_appeal_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qualification %>
+    <%= form.text_field :qualification, id: :user_profile_qualification %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

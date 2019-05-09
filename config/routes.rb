@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :user_profiles
   # デバイス認証
   get 'users/index'
   get 'users/show'

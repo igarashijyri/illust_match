@@ -1,0 +1,2 @@
+json.extract! user_profile, :id, :user_id, :name, :null, :gender, :age, :language, :db, :fw, :tools, :server, :developer_experience, :default, :operater_experience, :default, :tester_experience, :false, :basic_design_experience, :default, :details_design_experience, :default, :test_design_experience, :default, :appeal_text, :qualification, :created_at, :updated_at
+json.url user_profile_url(user_profile, format: :json)
