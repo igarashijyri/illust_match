@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190412110542) do
+ActiveRecord::Schema.define(version: 20190509054759) do
 
   create_table "illust_products", force: :cascade do |t|
     t.string "name"
@@ -31,6 +31,29 @@ ActiveRecord::Schema.define(version: 20190412110542) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "user_profiles", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name", default: "f", null: false
+    t.string "gender"
+    t.string "age"
+    t.string "language"
+    t.string "db"
+    t.string "fw"
+    t.string "tools"
+    t.string "server"
+    t.boolean "developer_experience", default: false
+    t.boolean "operater_experience", default: false
+    t.boolean "tester_experience", default: false
+    t.boolean "basic_design_experience", default: false
+    t.boolean "details_design_experience", default: false
+    t.boolean "test_design_experience", default: false
+    t.string "appeal_text"
+    t.string "qualification"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
