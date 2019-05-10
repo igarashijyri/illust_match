@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
 
-  resources :user_profiles
   # デバイス認証
   get 'users/index'
   get 'users/show'
   get 'users/user_page'
-  devise_for :users
-  resources :users, :only => [:index, :show]
 
-  resources :novel_products
+  # オーバーライドしたコントローラを読み込む
+  devise_for :users, :controllers => {
+  :registrations => 'users/registrations'
+  }
+  resources :users, :only => [:index, :show]
+  resources :user_profiles
+
 
   # 画像アップロード
   get '/posts', to: 'posts#show'
