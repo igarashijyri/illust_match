@@ -26,6 +26,13 @@
     <%= f.text_field :name, autofocus: true  %>
   </div>
 
+  <%= f.fields_for (@user.build_user_profile) do |i| %>
+    <div class="form-group">
+      <%= i.label :postal_code, "ユーザ名" %>
+      <%= i.text_field :name %>
+    </div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit "サインイン" %>
   </div>
