@@ -1,57 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <h1>User Profiles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Gender</th>
-      <th>Age</th>
-      <th>Language</th>
-      <th>Db</th>
-      <th>Fw</th>
-      <th>Tools</th>
-      <th>Server</th>
-      <th>Developer experience</th>
-      <th>Operater experience</th>
-      <th>Tester experience</th>
-      <th>Basic design experience</th>
-      <th>Details design experience</th>
-      <th>Test design experience</th>
-      <th>Appeal text</th>
-      <th>Qualification</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
     <% @user_profiles.each do |user_profile| %>
       <tr>
         <td><%= user_profile.name %></td>
-        <td><%= user_profile.gender %></td>
-        <td><%= user_profile.age %></td>
-        <td><%= user_profile.language %></td>
-        <td><%= user_profile.db %></td>
-        <td><%= user_profile.fw %></td>
-        <td><%= user_profile.tools %></td>
-        <td><%= user_profile.server %></td>
-        <td><%= user_profile.developer_experience %></td>
-        <td><%= user_profile.operater_experience %></td>
-        <td><%= user_profile.tester_experience %></td>
-        <td><%= user_profile.basic_design_experience %></td>
-        <td><%= user_profile.details_design_experience %></td>
-        <td><%= user_profile.test_design_experience %></td>
-        <td><%= user_profile.appeal_text %></td>
-        <td><%= user_profile.qualification %></td>
         <td><%= link_to 'Show', user_profile %></td>
-        <td><%= link_to 'Edit', edit_user_profile_path(user_profile) %></td>
-        <td><%= link_to 'Destroy', user_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Edit', edit_user_profile_path(user_profile) %></td>
+        <td><%#= link_to 'Destroy', user_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New User Profile', new_user_profile_path %>
+<%#= link_to 'New User Profile', new_user_profile_path %>
