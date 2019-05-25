@@ -12,20 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20190523151526) do
 
-  create_table "illust_products", force: :cascade do |t|
-    t.string "name"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_illust_products_on_user_id"
-  end
-
-  create_table "novel_products", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string "name"
     t.string "image"
@@ -36,8 +22,7 @@ ActiveRecord::Schema.define(version: 20190523151526) do
   end
 
   create_table "user_profiles", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "name", default: "f", null: false
+    t.string "name", null: false
     t.string "gender"
     t.string "age"
     t.string "language"
@@ -56,7 +41,6 @@ ActiveRecord::Schema.define(version: 20190523151526) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "image"
-    t.index ["user_id"], name: "index_user_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
