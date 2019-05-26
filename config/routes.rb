@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   # オーバーライドしたコントローラを読み込む
   devise_for :users, :controllers => {
-  :registrations => 'users/registrations'
+  :registrations => 'users/registrations',
+  :sessions => 'users/sessions'
   }
   resources :users, :only => [:index, :show]
   resources :user_profiles
