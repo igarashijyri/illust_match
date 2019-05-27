@@ -5,13 +5,16 @@ class ApplicationController < ActionController::Base
 
   # サインインした時の遷移先
   def after_sign_in_path_for(resource)
-  user_profiles_path
-  #  user_path(current_user[:id])
+    if UserProfile.find_by(user_id: current_user.id)
+      user_profiles_path
+    else
+      new_user_profile_path
+    end
   end
 
   # サインアウトした時の遷移先
   def after_sign_out_path_for(resource)
-   new_user_session_path
+    new_user_session_path
   end
 
   def user_logged_in?
@@ -22,8 +25,8 @@ class ApplicationController < ActionController::Base
 
   protected
 
-    def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
-    end
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+  end
 
 end
