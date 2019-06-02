@@ -1,5 +1,6 @@
 class UserProfilesController < ApplicationController
   before_action :set_user_profile, only: [:show, :edit, :update, :destroy]
+  skip_before_action :profile_exit?, only: [:new, :create]  
 
   # GET /user_profiles
   # GET /user_profiles.json

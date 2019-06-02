@@ -23,7 +23,6 @@ class ApplicationController < ActionController::Base
 
   def profile_exit?
     return if current_user.blank?
-    binding.pry
     unless UserProfile.find_by(id: current_user.id)
       redirect_to new_user_profile_path
     end
