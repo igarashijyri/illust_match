@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :comments
   # デバイス認証
   get 'users/index'
   get 'users/show'
@@ -12,10 +13,5 @@ Rails.application.routes.draw do
   }
   resources :users, :only => [:index, :show]
   resources :user_profiles
-
-
-  # 画像アップロード
-  get '/posts', to: 'posts#show'
-  post '/posts/create', to: 'posts#create'
 
 end
