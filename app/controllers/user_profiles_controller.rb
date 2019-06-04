@@ -2,28 +2,21 @@ class UserProfilesController < ApplicationController
   before_action :set_user_profile, only: [:show, :edit, :update, :destroy]
   skip_before_action :profile_exit?, only: [:new, :create]  
 
-  # GET /user_profiles
-  # GET /user_profiles.json
   def index
     @user_profiles = UserProfile.all
+    @comment = Comment.all
   end
 
-  # GET /user_profiles/1
-  # GET /user_profiles/1.json
   def show
   end
 
-  # GET /user_profiles/new
   def new
     @user_profile = UserProfile.new
   end
 
-  # GET /user_profiles/1/edit
   def edit
   end
 
-  # POST /user_profiles
-  # POST /user_profiles.json
   def create
     @user_profile = UserProfile.new(user_profile_params)
     @user_profile.user_id = current_user.id
@@ -38,8 +31,6 @@ class UserProfilesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /user_profiles/1
-  # PATCH/PUT /user_profiles/1.json
   def update
     respond_to do |format|
       if @user_profile.update(user_profile_params)

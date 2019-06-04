@@ -5,6 +5,8 @@
     <% @user_profiles.each do |user_profile| %>
       <tr>
         <td><%= user_profile.name %></td>
+        <% binding.pry %>
+        <td><%= image_tag @comment[user_profile.id].image %></td>
         <td><%= link_to 'Show', user_profile %></td>
       </tr>
     <% end %>
