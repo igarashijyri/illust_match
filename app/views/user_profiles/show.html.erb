@@ -1,89 +1,84 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @user_profile.user_id %>
-</p>
-
-<p>
-  <strong>Name:</strong>
+  <strong><%= t('profile.user')  %></strong>
   <%= @user_profile.name %>
 </p>
 
 <p>
-  <strong>Gender:</strong>
+  <strong><%= t('profile.gender')  %></strong>
   <%= @user_profile.gender %>
 </p>
 
 <p>
-  <strong>Age:</strong>
+  <strong><%= t('profile.age')  %></strong>
   <%= @user_profile.age %>
 </p>
 
 <p>
-  <strong>Language:</strong>
+  <strong><%= t('profile.language')  %></strong>
   <%= @user_profile.language %>
 </p>
 
 <p>
-  <strong>Db:</strong>
+  <strong><%= t('profile.db')  %></strong>
   <%= @user_profile.db %>
 </p>
 
 <p>
-  <strong>Fw:</strong>
+  <strong><%= t('profile.fw')  %></strong>
   <%= @user_profile.fw %>
 </p>
 
 <p>
-  <strong>Tools:</strong>
+  <strong><%= t('profile.tools')  %></strong>
   <%= @user_profile.tools %>
 </p>
 
 <p>
-  <strong>Server:</strong>
+  <strong><%= t('profile.server')  %></strong>
   <%= @user_profile.server %>
 </p>
 
 <p>
-  <strong>Developer experience:</strong>
+  <strong><%= t('profile.developer_experience')  %></strong>
   <%= @user_profile.developer_experience %>
 </p>
 
 <p>
-  <strong>Operater experience:</strong>
+  <strong><%= t('profile.developer_experience')  %></strong>
   <%= @user_profile.operater_experience %>
 </p>
 
 <p>
-  <strong>Tester experience:</strong>
+  <strong><%= t('profile.operater_experience') %></strong>
   <%= @user_profile.tester_experience %>
 </p>
 
 <p>
-  <strong>Basic design experience:</strong>
+  <strong><%= t('profile.tester_experience')  %></strong>
   <%= @user_profile.basic_design_experience %>
 </p>
 
+
 <p>
-  <strong>Details design experience:</strong>
+  <strong><%= t('profile.basic_design_experience')  %></strong>
   <%= @user_profile.details_design_experience %>
 </p>
 
 <p>
-  <strong>Test design experience:</strong>
+  <strong><%= t('profile.detail_design_experience')  %></strong>
   <%= @user_profile.test_design_experience %>
 </p>
 
 <p>
-  <strong>Appeal text:</strong>
+  <strong><%= t('profile.appeal_text') %></strong>
   <%= @user_profile.appeal_text %>
 </p>
 
 <p>
-  <strong>Qualification:</strong>
+  <strong><%= t('profile.qualification') %></strong>
   <%= @user_profile.qualification %>
 </p>
 
-<%= link_to 'Edit', edit_user_profile_path(@user_profile) %> |
 <%= link_to 'Back', user_profiles_path %>

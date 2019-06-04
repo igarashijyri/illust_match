@@ -3,17 +3,13 @@
 <h1>User Profiles</h1>
   <tbody>
     <% @user_profiles.each do |user_profile| %>
-      <tr>
-        <td><%= user_profile.name %></td>
-        <% binding.pry %>
-        <td><%= image_tag @comment[user_profile.id].image %></td>
-        <td><%= link_to 'Show', user_profile %></td>
-      </tr>
+      <div class ="profile">
+        <%= link_to "#{user_profile.name}", user_profile %><br>
+        <%= image_tag @comment[user_profile.id].image.variant(resize: "300x300") %>
+      </div>
     <% end %>
   </tbody>
 </table>
-
-<%= link_to 'New User Profile', new_user_profile_path %>
 
 <div class="logout">
   <%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %>

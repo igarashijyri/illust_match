@@ -43,8 +43,6 @@ class UserProfilesController < ApplicationController
     end
   end
 
-  # DELETE /user_profiles/1
-  # DELETE /user_profiles/1.json
   def destroy
     @user_profile.destroy
     respond_to do |format|

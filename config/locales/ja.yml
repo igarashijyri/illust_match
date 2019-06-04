@@ -1,0 +1,18 @@
+ja:
+  profile:
+    user: ユーザ名
+    gender: 性別
+    age: 年齢
+    language: 得意言語
+    db: 得意DB
+    fw: フレームワーク
+    tools: その他ツール
+    developer_experience: 開発経験
+    operater_experience: 運用経験
+    tester_experience: テスター経験
+    basic_design_experience: 基本設計経験
+    detail_design_experience: 詳細設計経験
+    test_design_experience: テスト設計経験
+    appeal_text: 自己PR
+    qualification: 資格
+    server: サーバ
