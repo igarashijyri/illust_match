@@ -6,7 +6,9 @@
     <% @user_profiles.each do |user_profile| %>
       <div class ="profile">
         <%= link_to "#{user_profile.name}", user_profile %><br>
-        <%= image_tag @comment[user_profile.id - 1].image.variant(resize: "300x300") %>
+        <% if @comment[user_profile.id - 1].present?  %>
+          <%= image_tag @comment[user_profile.id - 1].image.variant(resize: "300x300") %>
+        <% end %>
       </div>
     <% end %>
   </tbody>

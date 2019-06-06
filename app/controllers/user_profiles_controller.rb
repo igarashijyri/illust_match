@@ -8,7 +8,7 @@ class UserProfilesController < ApplicationController
   end
 
   def show
-    @comment = Comment.find(1)
+    @comment = Comment.find(params[:id].to_i)
   end
 
   def new
