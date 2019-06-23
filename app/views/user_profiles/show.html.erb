@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= image_tag @comment.image.variant(resize: "300x300") %>
+<%= image_tag @comment.image.variant(resize: "300x300") if @comment.present? %>
 
 <p>
   <strong><%= t('profile.user')  %></strong>

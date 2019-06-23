@@ -8,7 +8,7 @@ class UserProfilesController < ApplicationController
   end
 
   def show
-    @comment = Comment.find(params[:id].to_i)
+    @comment = Comment.find(params[:id].to_i) if Comment.find_by(id: params[:id])
   end
 
   def new
