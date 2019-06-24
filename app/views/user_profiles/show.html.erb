@@ -88,3 +88,7 @@
 <% if current_user.id == params[:id].to_i %>
   <%= link_to 'プロフィール編集', edit_user_profile_path(params[:id]) %>
 <% end %>
+
+<% if current_user.id == params[:id].to_i %>
+  <%= link_to 'プロフィール画像編集', edit_comment_path(params[:id]) %>
+<% end %>
