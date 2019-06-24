@@ -17,8 +17,8 @@
   </div>
 
   <div class="field">
-    <%= form.label t('profile.gender') %>
-    <%= form.text_field :gender, id: :user_profile_gender %>
+    <label>男</label><%= form.radio_button :gender, "男" %> 
+    <label>女</label><%= form.radio_button :gender, "女" %> 
   </div>
 
   <div class="field">
@@ -53,32 +53,39 @@
 
   <div class="field">
     <%= form.label t('profile.developer_experience') %>
-    <%= form.text_field :developer_experience, id: :user_profile_developer_experience %>
+    <label>有</label><%= form.radio_button :developer_experience, "true" %>
+    <label>無</label><%= form.radio_button :developer_experience, "false" %>
+    <label>
   </div>
  
   <div class="field">
     <%= form.label t('profile.operater_experience') %>
-    <%= form.text_field :operater_experience, id: :user_profile_operater_experience %>
+    <label>有</label><%= form.radio_button :operater_experience, "true" %>
+    <label>無</label><%= form.radio_button :operater_experience, "false" %>
   </div>
 
   <div class="field">
     <%= form.label t('profile.tester_experience') %>
-    <%= form.text_field :tester_experience, id: :user_profile_tester_experience %>
+    <label>有</label><%= form.radio_button :tester_experience, "true" %>
+    <label>無</label><%= form.radio_button :tester_experience, "false" %>
   </div>
 
   <div class="field">
     <%= form.label t('profile.basic_design_experience') %>
-    <%= form.text_field :basic_design_experience, id: :user_profile_basic_design_experience %>
+    <label>有</label><%= form.radio_button :basic_design_experience, "true" %>
+    <label>無</label><%= form.radio_button :basic_design_experience, "false" %>
   </div>
 
   <div class="field">
     <%= form.label t('profile.detail_design_experience') %>
-    <%= form.text_field :details_design_experience, id: :user_profile_details_design_experience %>
+    <label>有</label><%= form.radio_button :detail_design_experience, "true" %>
+    <label>無</label><%= form.radio_button :detail_design_experience, "false" %>
   </div>
 
   <div class="field">
     <%= form.label t('profile.test_design_experience') %>
-    <%= form.text_field :test_design_experience, id: :user_profile_test_design_experience %>
+    <label>有</label><%= form.radio_button :test_design_experience, "true" %>
+    <label>無</label><%= form.radio_button :test_design_experience, "false" %>
   </div>
 
   <div class="field">
