@@ -89,6 +89,10 @@
   <%= link_to 'プロフィール編集', edit_user_profile_path(params[:id]) %>
 <% end %>
 
-<% if current_user.id == params[:id].to_i %>
+<% if current_user.id == params[:id].to_i && @comment_flug.present? %>
   <%= link_to 'プロフィール画像編集', edit_comment_path(params[:id]) %>
+<% end %>
+
+<% if current_user.id == params[:id].to_i && @comment_flug.blank? %>
+  <%= link_to 'プロフィール画像作成', new_comment_path(params[:id]) %>  
 <% end %>

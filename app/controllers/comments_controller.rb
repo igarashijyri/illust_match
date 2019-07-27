@@ -13,6 +13,7 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
+    @comment_flug = Comment.comment_exist?
   end
 
   def edit

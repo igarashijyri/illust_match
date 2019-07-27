@@ -2,7 +2,6 @@
 
 <h1>User Profiles</h1>
   <tbody>
-    <%# ユーザ画像が存在しなければ表示しない  %>
     <% @user_profiles.each do |user_profile| %>
       <div class ="profile">
         <%= link_to "#{user_profile.name}", user_profile %><br>
